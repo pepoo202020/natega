@@ -14,12 +14,12 @@ main {
   @apply hidden lg:block;
 }
 .middleHeader img {
-  @apply w-[80px] lg:w-[100px];
+  @apply w-[80px] lg:w-[90px];
 }
 
 .church,
 .school {
-  @apply lg:w-[200px] w-[80px];
+  @apply lg:w-[150px] w-[80px];
 }
 
 .mainheaderText {
