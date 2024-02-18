@@ -1,5 +1,5 @@
 main {
-  @apply bg-[#dda15e] h-screen w-screen lg:overflow-hidden overflow-x-hidden relative py-[26px] px-10 lg:px-[50px] text-white;
+  @apply bg-[#dda15e] h-screen w-screen lg:overflow-hidden overflow-x-hidden relative py-[10px] px-10 lg:px-[50px] text-white;
 }
 
 .mainHeader {
