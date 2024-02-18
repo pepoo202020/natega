@@ -128,8 +128,8 @@ const Home = () => {
           className="mainImage"
           src="/15.png"
           alt="main image logo"
-          width={500}
-          height={500}
+          width={300}
+          height={300}
         />
       </div>
     </main>
