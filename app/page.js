@@ -20,7 +20,12 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fullName = first + " " + second + " " + third + " " + fourth;
-    const matchingItem = data.find((item) => item.name.includes(fullName));
+    const matchingItem = data.find((item) =>
+      item.name
+        .trim()
+        .toLocaleLowerCase()
+        .includes(fullName.trim().toLocaleLowerCase())
+    );
 
     if (matchingItem) {
       router.push(`/${fullName}`);
@@ -28,7 +33,6 @@ const Home = () => {
       alert("من فضلك ادخل اسم صحيح");
       setFirst("");
       setSecond("");
-      setThird("");
       setThird("");
       setFourth("");
     }
