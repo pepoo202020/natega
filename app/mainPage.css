@@ -41,7 +41,7 @@ main {
   @apply flex items-center justify-center gap-5 py-5;
 }
 .mainContent img {
-  @apply hidden lg:block;
+  @apply hidden lg:block h-[200px];
 }
 
 .content form {
