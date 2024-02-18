@@ -23,14 +23,14 @@ main {
 }
 
 .mainheaderText {
-  @apply text-3xl lg:py-5 py-2 text-center font-bold;
+  @apply text-2xl lg:py-5 py-2 text-center font-bold;
 }
 .secondheadertext {
-  @apply text-3xl lg:pb-5 pb-2 text-center font-bold;
+  @apply text-2xl lg:pb-5 pb-2 text-center font-bold;
 }
 
 .thirdheadertext {
-  @apply text-3xl text-center font-bold;
+  @apply text-2xl text-center font-bold;
 }
 
 .middleHeadermobile {
