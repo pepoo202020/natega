@@ -1,0 +1,73 @@
+main {
+  @apply bg-[#dda15e] h-screen w-screen lg:overflow-hidden overflow-x-hidden relative py-[26px] px-10 lg:px-[50px] text-white;
+}
+
+.mainHeader {
+  @apply flex items-center justify-between gap-2 lg:gap-0;
+}
+
+.middleHeader {
+  @apply flex flex-col items-center;
+}
+
+.middleHeader h1 {
+  @apply hidden lg:block;
+}
+.middleHeader img {
+  @apply w-[80px] lg:w-[100px];
+}
+
+.church,
+.school {
+  @apply lg:w-[200px] w-[80px];
+}
+
+.mainheaderText {
+  @apply text-3xl lg:py-5 py-2 text-center font-bold;
+}
+.secondheadertext {
+  @apply text-3xl lg:pb-5 pb-2 text-center font-bold;
+}
+
+.thirdheadertext {
+  @apply text-3xl text-center font-bold;
+}
+
+.middleHeadermobile {
+  @apply flex lg:hidden flex-col items-center pb-5;
+}
+
+.mainContent {
+  @apply flex items-center justify-center gap-5 py-5;
+}
+.mainContent img {
+  @apply hidden lg:block;
+}
+
+.content form {
+  @apply flex flex-col lg:items-start justify-center gap-10 items-center;
+}
+
+.content p {
+  @apply text-2xl font-bold text-red-500 text-center;
+}
+
+.content {
+  @apply w-full lg:w-1/2;
+}
+
+.names {
+  @apply flex items-center gap-5 flex-wrap lg:justify-start justify-center;
+}
+
+.name {
+  @apply flex flex-col items-start gap-2;
+}
+
+.name input {
+  @apply placeholder:text-start p-2 text-black text-start;
+}
+
+.content form button {
+  @apply bg-green-600 py-5 px-10 rounded-lg text-2xl;
+}

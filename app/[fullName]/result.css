@@ -1,0 +1,91 @@
+.result {
+  @apply w-screen bg-[#dda15e] h-screen overflow-x-hidden relative py-[26px] px-10 lg:px-[50px] text-white;
+}
+
+.mainHeader {
+  @apply flex items-center justify-between gap-2 lg:gap-0;
+}
+
+.middleHeader {
+  @apply flex flex-col items-center;
+}
+
+.middleHeader h1 {
+  @apply hidden lg:block;
+}
+.middleHeader img {
+  @apply w-[80px] lg:w-[100px];
+}
+
+.church,
+.school {
+  @apply lg:w-[200px] w-[80px];
+}
+
+.mainheaderText {
+  @apply text-3xl lg:py-5 py-2 text-center font-bold;
+}
+.secondheadertext {
+  @apply text-3xl lg:pb-5 pb-2 text-center font-bold;
+}
+
+.thirdheadertext {
+  @apply text-3xl text-center font-bold;
+}
+
+.middleHeadermobile {
+  @apply flex lg:hidden flex-col items-center pb-5;
+}
+
+.namesHeade {
+  @apply flex lg:flex-row flex-col w-full items-center justify-between lg:gap-20 gap-10 text-center lg:py-5 py-4 lg:text-4xl text-xl font-bold;
+}
+
+.precentage,
+.totalResult {
+  @apply flex gap-2 items-center;
+}
+
+.notPresent {
+  @apply flex items-center justify-center text-5xl text-red-500 py-10;
+}
+.gradesContent {
+  @apply flex flex-col items-center gap-2 lg:w-3/4 w-full lg:mx-0 mx-2;
+}
+
+.grades {
+  @apply bg-white/70   shadow-lg rounded-xl w-fit lg:w-full text-black  flex lg:flex-row flex-col items-center justify-start  overflow-hidden;
+}
+
+.container {
+  @apply flex lg:flex-col flex-row items-center justify-center;
+}
+
+.container .subjectName {
+  @apply text-center flex lg:h-[90px] items-center justify-center text-xl font-bold w-full border-b-2 border-black;
+}
+
+.container .subDeg {
+  @apply bg-white w-full text-center py-5 text-xl font-bold;
+}
+
+.content {
+  @apply w-full flex justify-center items-center;
+}
+
+.total {
+  @apply flex lg:flex-row flex-col items-center justify-end w-full lg:gap-20 gap-5 lg:text-3xl text-xl;
+}
+
+.buttons {
+  @apply flex items-center lg:justify-end justify-center  w-full py-5;
+}
+
+button,
+a {
+  @apply bg-yellow-500 px-10 py-5 shadow-xl rounded-lg;
+}
+
+.absence {
+  @apply text-red-600 font-bold;
+}
