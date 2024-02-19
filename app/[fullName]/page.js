@@ -26,14 +26,14 @@ export default function Resultpage({ params }) {
   const exactClassDegree = 12;
   const exactTasbhaDegree = 18;
 
-  if (className === "ابانوب") {
+  if (className === "الشهيد ابانوب") {
     exactTotalResult = 70;
     exactAlhanDegree = 10;
     exactTaksDegree = 10;
     exactCopticDegree = 10;
     exactAkedaDegree = 10;
   } else if (
-    className === "كرياكوس" ||
+    className === "الشهيد كرياكوس" ||
     className === "المريمات كوجي" ||
     className === "الشهيده مهرائيل واباهور" ||
     className === "الشهيد فيلوثيؤس"
