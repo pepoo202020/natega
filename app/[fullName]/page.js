@@ -26,6 +26,21 @@ export default function Resultpage({ params }) {
   const exactClassDegree = 12;
   const exactTasbhaDegree = 18;
 
+  const alhanAbsence = 0;
+  const akedaAbsence = 0;
+  const taksAbsence = 0;
+  const copticAbsence = 0;
+  const tasbhaAbsence = 0;
+  let sumSubjects = 0;
+
+  const alhan = matchingItem.alhan;
+  const taks = matchingItem.taks;
+  const coptic = matchingItem.coptic;
+  const akeda = matchingItem.akeda;
+  const kodas = matchingItem.kodasAbsence;
+  const clas = matchingItem.classAbsence;
+  const tasbha = matchingItem.tasbhaAbsence;
+
   if (className === "الشهيد ابانوب") {
     exactTotalResult = 70;
     exactAlhanDegree = 10;
@@ -70,24 +85,212 @@ export default function Resultpage({ params }) {
     totalResult = 0;
     present = false;
   } else {
-    if (matchingItem.tasbhaAbsence === -1) {
-      totalResult =
-        matchingItem.alhan +
-        matchingItem.taks +
-        matchingItem.coptic +
-        matchingItem.akeda +
-        matchingItem.kodasAbsence +
-        matchingItem.classAbsence;
+    if (matchingItem.alhan === -1) {
+      // alhan -1
+      if (matchingItem.taks === -1) {
+        // alhan -1 taks -1
+        if (matchingItem.coptic === -1) {
+          // alhan -1 taks -1 coptic -1
+          if (matchingItem.akeda === -1) {
+            // alhan -1 taks -1 coptic -1 akeda -1
+            sumSubjects =
+              alhanAbsence + taksAbsence + copticAbsence + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks -1 coptic -1 akeda -1 tasbha -1
+
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks -1 coptic -1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan -1 taks -1 coptic -1 akeda 1
+            sumSubjects = alhanAbsence + taksAbsence + copticAbsence + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks -1 coptic -1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks -1 coptic -1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        } else {
+          // alhan -1 taks -1 coptic 1
+          if (matchingItem.akeda === -1) {
+            // alhan -1 taks -1 coptic 1 akeda -1
+            sumSubjects = alhanAbsence + taksAbsence + coptic + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks -1 coptic 1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks -1 coptic 1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan -1 taks -1 coptic 1 akeda 1
+            sumSubjects = alhanAbsence + taksAbsence + coptic + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks -1 coptic 1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks -1 coptic 1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        }
+      } else {
+        // alhan -1 taks 1
+        if (matchingItem.coptic === -1) {
+          // alhan -1 taks 1 coptic -1
+          if (matchingItem.akeda === -1) {
+            // alhan -1 taks 1 coptic -1 akeda -1
+            sumSubjects = alhanAbsence + taks + copticAbsence + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks 1 coptic -1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks 1 coptic -1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan -1 taks 1 coptic -1 akeda 1
+            sumSubjects = alhanAbsence + taks + copticAbsence + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks 1 coptic -1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks 1 coptic -1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        } else {
+          // alhan -1 taks 1 coptic 1
+          if (matchingItem.akeda === -1) {
+            // alhan -1 taks 1 coptic 1 akeda -1
+            sumSubjects = alhanAbsence + taks + coptic + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks 1 coptic 1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks 1 coptic 1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan -1 taks 1 coptic 1 akeda 1
+            sumSubjects = alhanAbsence + taks + coptic + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan -1 taks 1 coptic 1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan -1 taks 1 coptic 1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        }
+      }
     } else {
-      totalResult =
-        matchingItem.alhan +
-        matchingItem.taks +
-        matchingItem.coptic +
-        matchingItem.akeda +
-        matchingItem.kodasAbsence +
-        matchingItem.classAbsence +
-        matchingItem.tasbhaAbsence;
+      // alhan 1
+      if (matchingItem.taks === -1) {
+        // alhan 1 taks -1
+        if (matchingItem.coptic === -1) {
+          // alhan 1 taks -1 coptic -1
+          if (matchingItem.akeda === -1) {
+            // alhan 1 taks -1 coptic -1 akeda -1
+            sumSubjects = alhan + taksAbsence + copticAbsence + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks -1 coptic -1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks -1 coptic -1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan 1 taks -1 coptic -1 akeda 1
+            sumSubjects = alhan + taksAbsence + copticAbsence + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks -1 coptic -1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks -1 coptic -1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        } else {
+          // alhan 1 taks -1 coptic 1
+          if (matchingItem.akeda === -1) {
+            // alhan 1 taks -1 coptic 1 akeda -1
+            sumSubjects = alhan + taksAbsence + coptic + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks -1 coptic 1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks -1 coptic 1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan 1 taks -1 coptic 1 akeda 1
+            sumSubjects = alhan + taksAbsence + coptic + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks -1 coptic 1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks -1 coptic 1 akeda 1 tasbha
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        }
+      } else {
+        // alhan 1 taks 1
+        if (matchingItem.coptic === -1) {
+          // alhan 1 taks 1 coptic -1
+          if (matchingItem.akeda === -1) {
+            // alhan 1 taks 1 coptic -1 akeda -1
+            sumSubjects = alhan + taks + copticAbsence + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks 1 coptic -1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks 1 coptic -1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan 1 taks 1 coptic -1 akeda 1
+            sumSubjects = alhan + taks + copticAbsence + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks 1 coptic -1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks 1 coptic -1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        } else {
+          // alhan 1 taks 1 coptic 1
+          if (matchingItem.akeda === -1) {
+            // alhan 1 taks 1 coptic 1 akeda -1
+            sumSubjects = alhan + taks + coptic + akedaAbsence;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks 1 coptic 1 akeda -1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks 1 coptic 1 akeda -1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          } else {
+            // alhan 1 taks 1 coptic 1 akeda 1
+            sumSubjects = alhan + taks + coptic + akeda;
+            if (matchingItem.tasbhaAbsence === -1) {
+              // alhan 1 taks 1 coptic 1 akeda 1 tasbha -1
+              totalResult = sumSubjects + kodas + clas;
+            } else {
+              // alhan 1 taks 1 coptic 1 akeda 1 tasbha 1
+              totalResult = sumSubjects + kodas + clas + tasbha;
+            }
+          }
+        }
+      }
     }
+
     present = true;
     precentage = ((totalResult / exactTotalResult) * 100).toFixed(0);
   }
@@ -195,14 +398,7 @@ export default function Resultpage({ params }) {
                     exactAkedaDegree}
                   )
                 </div>
-                <div className="subDeg">
-                  {(
-                    matchingItem.alhan +
-                    matchingItem.taks +
-                    matchingItem.coptic +
-                    matchingItem.akeda
-                  ).toFixed(1)}
-                </div>
+                <div className="subDeg">{sumSubjects.toFixed(1)}</div>
               </div>
               <div className="container">
                 <div className="subjectName">غياب القداس</div>

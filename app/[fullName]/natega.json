@@ -1312,7 +1312,7 @@
     "name": "بتول ماجد سليم صموئيل",
     "className": "المريمات كوجي",
     "alhan": 30,
-    "taks": -1,
+    "taks": 10,
     "coptic": 10,
     "akeda": 10,
     "kodasAbsence": 12,
@@ -4824,9 +4824,9 @@
     "taks": 20,
     "coptic": 20,
     "akeda": 10,
-    "kodasAbsence": 8,
+    "kodasAbsence": 10,
     "classAbsence": 10,
-    "tasbhaAbsence": 9
+    "tasbhaAbsence": 12
   },
   {
     "name": "كيرلس وائل رشدي سعد",
