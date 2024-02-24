@@ -413,7 +413,7 @@
     "taks": 7,
     "coptic": 4.5,
     "akeda": 5.5,
-    "kodasAbsence": 7,
+    "kodasAbsence": 8,
     "classAbsence": 8,
     "tasbhaAbsence": -1
   },
@@ -2107,8 +2107,8 @@
     "taks": 8,
     "coptic": 10,
     "akeda": 8.25,
-    "kodasAbsence": 5,
-    "classAbsence": 9,
+    "kodasAbsence": 14,
+    "classAbsence": 10,
     "tasbhaAbsence": -1
   },
   {
@@ -2118,8 +2118,8 @@
     "taks": 10,
     "coptic": 10,
     "akeda": 9.5,
-    "kodasAbsence": 14,
-    "classAbsence": 10,
+    "kodasAbsence": 5,
+    "classAbsence": 9,
     "tasbhaAbsence": -1
   },
   {
@@ -2821,7 +2821,7 @@
     "alhan": 14,
     "taks": 20,
     "coptic": 14,
-    "akeda": -1,
+    "akeda": 8,
     "kodasAbsence": 1,
     "classAbsence": 6,
     "tasbhaAbsence": -1
@@ -2928,7 +2928,7 @@
   {
     "name": "صبري زكريا غطاس مهني",
     "className": "الانبا بولا",
-    "alhan": 20,
+    "alhan": 28,
     "taks": 17,
     "coptic": 18.5,
     "akeda": -1,
@@ -4880,7 +4880,7 @@
     "coptic": 11,
     "akeda": 6,
     "kodasAbsence": 3,
-    "classAbsence": 4,
+    "classAbsence": 5,
     "tasbhaAbsence": 4
   },
   {
